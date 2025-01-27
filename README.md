@@ -50,11 +50,11 @@ docker build --platform linux/amd64 -t sports-api .
 
 4. Tag the docker image
 ```bash
-docker tag sports-api:latest <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-api-latest`
+docker tag sports-api:latest <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-api-latest
 ```
 5. To push image to the registryadd
 ```bash
-docker push <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-api-latest`
+docker push <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-api-latest
 ```
 
 6. Go back to go your console and confirm your image build
