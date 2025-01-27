@@ -1,6 +1,6 @@
 # DevOps Challenge - Week 2 - Day 1: Dockerized Sports Data
 
-![alt text](<Screenshot 2025-01-27 121412.png>)
+![alt text]<Screenshot 2025-01-27 121412.png>
 
 ## Project Overview:
 
