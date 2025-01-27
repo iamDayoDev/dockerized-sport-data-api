@@ -59,7 +59,7 @@ docker push <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 
 6. Go back to go your console and confirm your image build
 
-## Step 3: Create a cluster
+## Step 4: Create a cluster
 1. In the Console, Naviagte to ECS and create a cluster
 
 2. After creating the cluster, Now go to task definition and create a task.
@@ -69,22 +69,22 @@ docker push <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 
 -The task has been successfully created.
 
-## Step 4: Create a Service
+## Step 5: Create a Service
 
 1. In the cluster page, navigate to service and create a service.
-    	- select your task as the family name
-        - Input your service name.
-        - Select service type as replica and put 2 in the desired replica
-        - In the Networking, create a security group and put necessary security configurations
-        - Also, in the Load balance, allow App LB and create a new ALB.
+    - select your task as the family name
+    - Input your service name.
+    - Select service type as replica and put 2 in the desired replica
+    - In the Networking, create a security group and put necessary security configurations
+    - Also, in the Load balance, allow App LB and create a new ALB.
 
-## Step 5: Test your app
-    - Wait for the service to succesffuly deploy. 
+## Step 6: Test your app
+   - Wait for the service to succesffuly deploy. 
     - Then, go to the load balancer page in your console and copy the DNS URL.
     - Append /sports at the end of the URL and paste in your browser.
 
-## Step 6: Create an API Gateway
-    - Navigate to API Gateway on your console. 
+## Step 7: Create an API Gateway
+ - Navigate to API Gateway on your console. 
     - Create a GET API.
     - After that, go to create resource.
     - Creat a resource /sports
@@ -96,8 +96,8 @@ docker push <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
     - Then create method.
 
 
-## Step 7: Deploy and Test the API Gateway
-    - Deploy the API (From stage: "New Stage" to "Dev"), then deploy
+## Step 8: Deploy and Test the API Gateway
+  - Deploy the API (From stage: "New Stage" to "Dev"), then deploy
     - To test the app, copy the invoke URL and append /sports at the end.
 
 ### You have successfully created a Dockerized app using the AWS ECS and AWS Fargate.
