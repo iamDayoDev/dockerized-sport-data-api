@@ -1,6 +1,6 @@
 # DevOps Challenge - Week 2 - Day 1: Dockerized Sports Data
 
-![alt text]<Screenshot 2025-01-27 121412.png>
+
 
 ## Project Overview:
 
@@ -45,7 +45,7 @@ aws ecr get-login-password --region us-east-1 | docker login --username AWS --pa
 ```
 3. To Build the docker file run
 ```bash
-docker build --platform linux/amd64 -t sports-api .`
+docker build --platform linux/amd64 -t sports-api .
 ```
 
 4. Tag the docker image
