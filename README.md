@@ -44,14 +44,20 @@ aws ecr create-repository --repository-name sports-api --region us-east-1
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com
 ```
 3. To Build the docker file run
-`docker build --platform linux/amd64 -t sports-api .`
+```bash
+docker build --platform linux/amd64 -t sports-api .`
+```
 
-4. Tag and the the docker image
-`docker tag sports-api:latest <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-api-latest`
+4. Tag the docker image
+```bash
+docker tag sports-api:latest <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-api-latest`
+```
+5. To push image to the registryadd
+```bash
+docker push <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-api-latest`
+```
 
-`docker push <AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-api-latest`
-
-5. Go back to go your console and confirm your image build
+6. Go back to go your console and confirm your image build
 
 ## Step 3: Create a cluster
 1. In the Console, Naviagte to ECS and create a cluster
